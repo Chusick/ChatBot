@@ -1,0 +1,55 @@
+package bot
+
+import java.util.Scanner
+
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+
+    println("Hello! My name is Baltazar.")
+    println("I was created in 2022.")
+    println("Please, remind me your name.")
+
+    val name = scanner.nextLine()
+
+    println("What a great name you have, " + name + "!")
+    println("Let me guess your age.")
+    println("Enter remainders of dividing your age by 3, 5 and 7.")
+
+    val rem3 = readLine()!!.toInt()
+    val rem5 = readLine()!!.toInt()
+    val rem7 = readLine()!!.toInt()
+
+    val yourAge = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
+
+    println("Your age is $yourAge; that's a good time to start programming!")
+    println("Now I will prove to you that I can count to any number you want.")
+
+    val num = scanner.nextInt()
+    var res = 0
+
+    for (i in 0..num) {
+        res++
+        println("$i!")
+    }
+
+    println("Let's test your programming knowledge.")
+
+    val phrase = """
+    Why do we use methods?
+    1. To repeat a statement multiple times.
+    2. To decompose a program into several small subroutines.
+    3. To determine the execution time of a program.
+    4. To interrupt the execution of a program.""".trimIndent()
+
+    println("$phrase")
+    var correstAnswer = readLine()!!.toInt()
+
+    while (correstAnswer != 2) {
+        if (correstAnswer != 2) {
+            println("Please, try again.")
+            correstAnswer = readLine()!!.toInt()
+        }
+    }
+    println ("Congratulations, have a nice day!")
+}
